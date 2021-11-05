@@ -1,14 +1,12 @@
-import React, { useContext } from 'react';
-import { authContext } from '../contexts/authContext';
+import React from 'react';
+import { useAuth } from '../contexts/authContext'
 
 function Sign() {
-    const { Logout, user } = useContext(authContext)
+    const { Logout } = useAuth()
 
     function handleLogout() {
         Logout();
     }
-    
-    console.log(user);
     return (
         <div>
             Dashboard

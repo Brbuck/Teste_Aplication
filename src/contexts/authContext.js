@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState, useContext } from 'react';
 import * as api from '../services/auth'
 
 export const authContext = createContext({})
@@ -43,6 +43,12 @@ function AuthProvider({ children }) {
 }
 
 export default AuthProvider;
+
+export function useAuth(){
+    const context = useContext(authContext)
+
+    return context
+}
 
 /* import React, { createContext, useState, useEffect, useContext } from 'react';
 
