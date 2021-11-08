@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    width: 100%;
+    height: 100vh;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+
+    div{
+        width: 380px;
+    }
 `;
 
 
@@ -46,6 +53,7 @@ export const LoginButton = styled.button`
     color: #fff;
     font-size: 1rem;
     font-weight:bold;
+    border-radius: 6px;
 
     cursor: pointer;
     transition: all 0.3s;

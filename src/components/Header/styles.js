@@ -6,9 +6,14 @@ export const Container = styled.div`
     width: 100%;
     height: 80px;
     padding: 10px 30px;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
     background-color: ${props => props.theme.colors.background};
 
     div{
