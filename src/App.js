@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Routers from './Routes'
 import AuthProvider from './contexts/authContext'
@@ -21,8 +21,8 @@ function App() {
   return (
     <AuthProvider>
       <ThemeProvider theme={theme}>
-        <Header togleTheme={togleTheme} />
         <Router>
+          <Header togleTheme={togleTheme} />
           <Routers />
         </Router>
         <GlobalStyles />

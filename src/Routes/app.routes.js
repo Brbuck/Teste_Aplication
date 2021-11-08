@@ -5,7 +5,7 @@ import Buy from '../pages/buy';
 
 const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<Dashboard />} />
+    <Route path="/login" element={<Dashboard />} />
     <Route path="/buy" element={<Buy />} />
   </Routes>
 );
