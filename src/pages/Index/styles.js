@@ -15,18 +15,41 @@ export const Container = styled.div`
     margin-top: 100px;
     padding: 10px;
 
+    @media screen and (max-width: 812px){
+        grid-template-columns: 1fr;
+        height: 400px;
+
+    }
+           
     div{
        >h1{
            font-size: 2.5rem;
            margin-bottom:20px;
+
+           @media screen and (max-width: 1000px){
+                font-size: 2rem;
+           }
+
+           @media screen and (max-width: 650px){
+                font-size: 1.5rem;
+           }
        }
 
        >p{
            font-size: 1.1rem;
            line-height: 25px;
            margin-bottom:20px;
+
+           @media screen and (max-width: 1000px){
+                font-size: 1rem;
+           }
+
+           @media screen and (max-width: 650px){
+                font-size: 0.9rem;
+           }
        }
     }
+
 `;
 
 export const Button = styled.button`
@@ -42,6 +65,12 @@ export const Button = styled.button`
     background-color: #ff0f4d;
     color: #fff;
 
+    @media screen and (max-width: 650px){
+        width: 160px;
+        height: 50px;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
 
 `
 
@@ -56,12 +85,26 @@ export const ChurrascoContainer = styled.div`
     @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
         height: 800px;
+
     }
 
+    @media screen and (max-width: 650px) {
+        height: auto;
+    }
+
+    
     >div{
         >h2{
             font-size: 2.2rem;
             margin-bottom: 60px;
+
+            @media screen and (max-width: 1000px){
+                font-size: 2rem;
+            }
+
+            @media screen and (max-width: 650px){
+                font-size: 1.6rem;
+            }
         }
         div{
             display: grid;
@@ -69,17 +112,27 @@ export const ChurrascoContainer = styled.div`
             gap: 20px;
             padding-right: 10px;
 
-            @media screen and (max-width: 900px) {
-               justify-items: center;
-            }
+            @media screen and (max-width: 812px){
+                justify-items: center;
+            }   
 
+            @media screen and (max-width: 650px){
+                grid-template-columns: 1fr;
+                margin-bottom: 20px;
+            }
         }
     }
+
 `
 
 export const Image = styled.img`
     width: 260px;
     height: 260px;
+
+    @media screen and (max-width: 650px){
+        width: 300px;
+        height: 300px;
+    }
     
 `
 
@@ -91,38 +144,76 @@ export const HamburguerContainer = styled.div`
     margin-top: 40px;
     padding: 10px;
 
+    @media screen and (max-width: 1000px){
+        grid-template-columns: 1fr;
+
+    }
+
     div{
         
        >h2{
            font-size: 2.2rem;
            margin-bottom:20px;
+
+           @media screen and (max-width: 650px){
+            font-size: 1.7rem;
+           }
        }
 
        >p{
            font-size: 1.1rem;
            line-height: 25px;
            margin-bottom:20px;
+
+           @media screen and (max-width: 650px){
+            font-size: 0.9rem;
+           }
        }
     }
 
     >img{
-        width: 530px;  
-    }
+        width: 510px; 
+        height: 300px ;
 
-    @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr;
-        
-        >img{
+        @media screen and (max-width: 1000px){
             order: -1;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 812px){
+            justify-self: center;
+        }
+
+        @media screen and (max-width: 650px){
+            width: 400px;
+        }
+
+    @media screen and (max-width: 450px){
+            width: 300px;
         }
     }
+
+
+    
 `
 
 export const CervejaContainer = styled.div`
     padding: 10px;
 
     >img{
-        width: 530px;
+        width: 510px; 
+        height: 300px ; 
+        margin-top: 20px;
+
+        @media screen and (max-width: 650px){
+            width: 400px;
+        };
+
+        @media screen and (max-width: 450px){
+             width: 300px;
+        }
+
+        
     }
 
     div{
@@ -130,12 +221,20 @@ export const CervejaContainer = styled.div`
         >h2{
             font-size: 2.2rem;
             margin-bottom:20px;
+
+            @media screen and (max-width: 650px){
+                font-size: 1.6rem;
+           }
         }
  
         >p{
             font-size: 1.1rem;
             line-height: 25px;
             margin-bottom:20px;
+
+            @media screen and (max-width: 650px){
+                font-size: 0.9rem;
+           }
         }
      }
  
@@ -148,11 +247,15 @@ export const DepoimentosContainer = styled.div`
         font-size: 2.2rem;
         margin-bottom: 60px;
         text-align: center;
+
+        @media screen and (max-width: 650px){
+            font-size: 1.6rem;
+        }
     }
 
     >div{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
         justify-items: center;
         row-gap: 40px;
         
@@ -160,7 +263,7 @@ export const DepoimentosContainer = styled.div`
 `
 
 export const DepoimentosCard = styled.div`
-    width: 400px;
+    width: 375px;
     height: auto;
     padding: 10px;
 
@@ -170,6 +273,9 @@ export const DepoimentosCard = styled.div`
 
     margin-bottom: 50px;
 
+    @media screen and (max-width: 650px){
+        padding: 5px;
+    }
     >img{
         width: 150px;
         border-radius: 50%;
@@ -182,7 +288,11 @@ export const DepoimentosCard = styled.div`
     }
     >p{
         font-size: 1rem;
-        color: gray;
+        color: #696969;
+
+        @media screen and (max-width: 650px){
+            font-size: 0.9rem;
+        }
     }
 
 `
