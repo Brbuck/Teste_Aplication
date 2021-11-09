@@ -7,8 +7,9 @@ function Header({ togleTheme }) {
         <Container>
             <Links to='/'><LogoIcon /></Links>
             <div>
-                <Links to=''>Teste</Links>
-                <Links to=''>Teste</Links>
+                <Links to=''>Churrasco</Links>
+                <Links to=''>Hambúrguer</Links>
+                <Links to=''>Cerveja</Links>
             </div>
             <div>
                 <Links to='/cadastrar'>Cadastrar</Links>

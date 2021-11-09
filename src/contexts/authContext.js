@@ -29,7 +29,7 @@ function AuthProvider({ children }) {
     }
 
     function Logout() {
-        localStorage.clear();
+        localStorage.removeItem('@App:token');
         setUser(null);
     }
 
