@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, ChurrascoContainer, Image, Layout, Button } from './styles';
+import { Container, ChurrascoContainer, HamburguerContainer, Image, Layout, Button } from './styles';
 
 function Index() {
 
@@ -31,6 +31,15 @@ function Index() {
           </div>
         </div>
       </ChurrascoContainer>
+      <HamburguerContainer>
+        <div>
+          <h2>Curso de Hambúrguer</h2>
+          <p>Prepare-se para uma imersão no delicioso mundo do hambúrguer! Aprenda tudo sobre blends, hambúrgueres recheados e empanados,
+            além de diversas receitas de batata rústica, onions rings, maionese caseira, tudo isso na prática.</p>
+          <Button>Increva-se</Button>
+        </div>
+        <img src='https://feed.vtexassets.com/arquivos/ids/155876/Hamburguer1.jpg?v=636519813727430000' alt='imagem de hambúrguer' />
+      </HamburguerContainer>
     </Layout>
 
   )
