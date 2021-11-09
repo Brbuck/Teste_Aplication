@@ -106,14 +106,21 @@ export const HamburguerContainer = styled.div`
     }
 
     >img{
-        width: 530px;
+        width: 530px;  
+    }
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
         
+        >img{
+            order: -1;
+        }
     }
 `
 
 export const CervejaContainer = styled.div`
     padding: 10px;
-    
+
     >img{
         width: 530px;
     }
@@ -132,5 +139,50 @@ export const CervejaContainer = styled.div`
         }
      }
  
+
+`
+
+export const DepoimentosContainer = styled.div`
+
+    >h2{
+        font-size: 2.2rem;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    >div{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        justify-items: center;
+        row-gap: 40px;
+        
+    }
+`
+
+export const DepoimentosCard = styled.div`
+    width: 400px;
+    height: auto;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    margin-bottom: 50px;
+
+    >img{
+        width: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+       
+    }
+    >span{
+        font-size: 1rem;
+        margin: 10px 0px;
+    }
+    >p{
+        font-size: 1rem;
+        color: gray;
+    }
 
 `

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, ChurrascoContainer, HamburguerContainer, CervejaContainer, Image, Layout, Button } from './styles';
+import { Container, ChurrascoContainer, HamburguerContainer, CervejaContainer, DepoimentosContainer, DepoimentosCard, Image, Layout, Button } from './styles';
 
 function Index() {
 
@@ -64,6 +64,34 @@ function Index() {
           <Button>Increva-se</Button>
         </div>
       </CervejaContainer>
+      <DepoimentosContainer>
+        <h2>Veja alguns depoimentos</h2>
+        <div>
+          <DepoimentosCard>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXc2tHTPQ9Uz-AX_ODvky9BOa7acG1MrpCHQ&usqp=CAU' alt='avatar' />
+            <span>Fulano de Souza Perez</span>
+            <p>"Ingressar no curso de Mestre Cervejeiro foi fundamental para minha qualificação profissional na área de produção de cervejas,
+              embora já tivesse conhecimentos como Sommelier de Cervejas, não dominava os processos da produção da cerveja.
+              Com o curso de Cerveja e Malte me proporcionou conhecimentos técnicos e também a segurança para assumir
+              logo após a finalização do curso a produção de uma micro cervejaria, onde eu exerço essa função atualmente."</p>
+          </DepoimentosCard>
+          <DepoimentosCard>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DfPJ3SLExyiLXxxI1ir4-1JPSGdotHyhiw&usqp=CAU' alt='avatar' />
+            <span>Fulano de Fulano Perez</span>
+            <p>"Com pouco dinheiro precisava de um treinamento que me ensinasse a fazer o melhor e mais suculento Hambúrguer Artesanal,
+              que não fosse caro, me ensinasse passo a passo como iniciar minha produção direto da minha casa e que não precisasse de muito dinheiro
+              já que tinha muito pouco para investir."</p>
+          </DepoimentosCard>
+          <DepoimentosCard>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFstJkG7cFMUCC9hDurzbSPvDjT2QFODOfzg&usqp=CAU' alt='avatar' />
+            <span>Fulano de Souza Fulano</span>
+            <p>"Extremamente recomendado, técnica, descontração e muito aproveitamento teórico e prático. Eu queria aprender sobre churrasco,
+               principalmente o estilo americano. Eu aprendi!!! o mestre, recebe seus alunos com maestria. O show vale cada centavo podem ter certeza!!!
+               Prazer enorme em fazer este curso. Obrigado a todos e estão de parabéns."
+              </p>
+          </DepoimentosCard>
+        </div>
+      </DepoimentosContainer>
     </Layout>
 
   )
