@@ -110,3 +110,27 @@ export const HamburguerContainer = styled.div`
         
     }
 `
+
+export const CervejaContainer = styled.div`
+    padding: 10px;
+    
+    >img{
+        width: 530px;
+    }
+
+    div{
+        
+        >h2{
+            font-size: 2.2rem;
+            margin-bottom:20px;
+        }
+ 
+        >p{
+            font-size: 1.1rem;
+            line-height: 25px;
+            margin-bottom:20px;
+        }
+     }
+ 
+
+`
