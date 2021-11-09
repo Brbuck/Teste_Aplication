@@ -37,9 +37,48 @@ export const Button = styled.button`
     font-weight: 600;
     cursor: pointer;
     border-radius: 8px;
+    margin-bottom: 30px;
 
     background-color: #ff0f4d;
     color: #fff;
 
 
+`
+
+export const ChurrascoContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    height: 500px;
+    margin-top: 40px;
+    padding: 10px;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        height: 800px;
+    }
+
+    >div{
+        >h2{
+            font-size: 2.2rem;
+            margin-bottom: 60px;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding-right: 10px;
+
+            @media screen and (max-width: 900px) {
+               justify-items: center;
+            }
+
+        }
+    }
+`
+
+export const Image = styled.img`
+    width: 260px;
+    height: 260px;
+    
 `
