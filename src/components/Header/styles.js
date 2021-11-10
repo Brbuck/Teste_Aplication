@@ -1,5 +1,6 @@
 import styled, {css} from 'styled-components';
 import { AiOutlineBank } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import {Link} from 'react-router-dom'
 
 export const Container = styled.div`
@@ -18,9 +19,27 @@ export const Container = styled.div`
 
     div{
         a{
-            margin-left: 10px;
+            margin-left: 20px;
         }
     }
+
+    .menu{
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 812px){
+            display: none;
+        }
+    }
+
+    /* .active{
+         position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            flex-direction: column;
+            top: 80px;
+    } */
     
 `;
 
@@ -32,6 +51,17 @@ export const iconCss = css`
 `
 
 export const LogoIcon = styled(AiOutlineBank)`${iconCss}`
+
+export const MenuIcon = styled(GiHamburgerMenu)`
+    ${iconCss}
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: 812px){
+        display: block;
+    }
+
+`
 
 export const Links = styled(Link)`
     font-size: 1rem;
