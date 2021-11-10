@@ -8,8 +8,24 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 650px){
+        flex-direction: column;
+        justify-content: flex-start;
+
+        margin-top: 130px;
+    }
+
+
     div{
         width: 380px;
+
+        @media screen and (max-width: 650px){
+            >h1{
+            text-align: center;
+            font-size: 1.5rem;
+            }
+        }
+       
     }
 `;
 

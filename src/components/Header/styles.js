@@ -14,35 +14,49 @@ export const Container = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-
+    
     background-color: ${props => props.theme.colors.background};
-
-    div{
-        a{
-            margin-left: 20px;
-        }
-    }
+    
 
     .menu{
         display: flex;
         align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
 
         @media screen and (max-width: 812px){
-            display: none;
-        }
-    }
-
-    /* .active{
-         position: absolute;
+            position: absolute;
             width: 100%;
+            left: ${({click}) => (click ? '0px' : '-100%')};
             height: 100vh;
-            background-color: #fff;
             flex-direction: column;
-            top: 80px;
-    } */
+            top: 70px;
+
+            background-color: ${props => props.theme.colors.background};
+        }
+        
+    }
     
 `;
 
+export const Logout = styled.div`
+    a{
+        margin-left: 20px;
+
+        @media screen and (max-width: 812px){
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 650px){
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+    }
+`
+export const LogIn = styled(Logout)`
+
+`
 export const iconCss = css`
     width: 30px;
     height: 30px;
@@ -50,7 +64,18 @@ export const iconCss = css`
   
 `
 
-export const LogoIcon = styled(AiOutlineBank)`${iconCss}`
+export const LogoIcon = styled(AiOutlineBank)`
+    ${iconCss}
+    @media screen and (max-width: 812px){
+        width: 50px;
+        height: 50px;
+    }
+
+    @media screen and (max-width: 650px){
+        width: 30px;
+        height: 30px;
+    }
+`
 
 export const MenuIcon = styled(GiHamburgerMenu)`
     ${iconCss}

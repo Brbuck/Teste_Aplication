@@ -1,26 +1,40 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Switch from "react-switch";
 import { ThemeContext } from 'styled-components';
+import { useAuth } from '../../contexts/authContext'
 
-import { Container, LogoIcon, Links, LoginButton, MenuIcon } from './styles';
+import { Container, LogoIcon, Logout, LogIn, Links, LoginButton, MenuIcon } from './styles';
 
 function Header({ togleTheme }) {
     const { title } = useContext(ThemeContext)
 
-    return (
-        <Container>
-            <MenuIcon />
-            <div className='menu active'>
-                <Links to='/'><LogoIcon /></Links>
-                <Links to=''>Churrasco</Links>
-                <Links to=''>Hambúrguer</Links>
-                <Links to=''>Mestre Cervejeiro</Links>
-                <Links to='/cadastrar'>Cadastrar</Links>
-                <LoginButton to='/login'>Entrar</LoginButton>
-            </div>
-            <div>
+    const [click, setClick] = useState(false)
+    const handleMenu = () => {
+        setClick(!click)
+        console.log(click)
+    }
 
-            </div>
+    const { user } = useAuth()
+    return (
+        <Container click={click}>
+            <MenuIcon onClick={handleMenu} />
+            {
+                user ? <LogIn>
+                    <Links to=''>Home</Links>
+                    <Links to=''>Perfil</Links>
+                    <Links to=''>Cursos</Links>
+                </LogIn> :
+                    <Logout onClick={handleMenu} className='menu active'>
+                        <Links to='/'><LogoIcon /></Links>
+                        <Links to=''>Churrasco</Links>
+                        <Links to=''>Hambúrguer</Links>
+                        <Links to=''>Mestre Cervejeiro</Links>
+                        <Links to='/cadastrar'>Cadastrar</Links>
+                        <LoginButton to='/login'>Entrar</LoginButton>
+                    </Logout>
+            }
+
+
             <Switch
                 onChange={togleTheme} checked={title === 'dark'}
                 height={15}
