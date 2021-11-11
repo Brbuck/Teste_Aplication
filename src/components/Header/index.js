@@ -20,15 +20,15 @@ function Header({ togleTheme }) {
             <MenuIcon onClick={handleMenu} />
             {
                 user ? <LogIn>
-                    <Links to=''>Home</Links>
-                    <Links to=''>Perfil</Links>
+                    <Links to='/login'>Home</Links>
+                    <Links to='/perfil'>Perfil</Links>
                     <Links to=''>Cursos</Links>
                 </LogIn> :
                     <Logout onClick={handleMenu} className='menu active'>
                         <Links to='/'><LogoIcon /></Links>
-                        <Links to=''>Churrasco</Links>
-                        <Links to=''>Hambúrguer</Links>
-                        <Links to=''>Mestre Cervejeiro</Links>
+                        <Links to='churrasco'>Churrasco</Links>
+                        <Links to='/hamburguer'>Hambúrguer</Links>
+                        <Links to='mestre-cervejeiro'>Mestre Cervejeiro</Links>
                         <Links to='/cadastrar'>Cadastrar</Links>
                         <LoginButton to='/login'>Entrar</LoginButton>
                     </Logout>

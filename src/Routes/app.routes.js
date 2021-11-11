@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
 
 import Dashboard from '../pages/Dashboard/index'
-import Buy from '../pages/buy';
+import { Profile } from '../pages/pagesTestes'
 
 const AppRoutes = () => (
   <Routes>
     <Route path="/login" element={<Dashboard />} />
-    <Route path="/buy" element={<Buy />} />
+    <Route path="/perfil" element={<Profile />} />
   </Routes>
 );
 
