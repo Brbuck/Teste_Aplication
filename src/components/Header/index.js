@@ -3,7 +3,9 @@ import Switch from "react-switch";
 import { ThemeContext } from 'styled-components';
 import { useAuth } from '../../contexts/authContext'
 
-import { Container, LogoIcon, Logout, LogIn, Links, LoginButton, MenuIcon } from './styles';
+import DashboardHeader from '../DashboardHeader';
+
+import { Container, LogoIcon, Logout, Links, LoginButton, MenuIcon } from './styles';
 
 function Header({ togleTheme }) {
     const { title } = useContext(ThemeContext)
@@ -17,24 +19,20 @@ function Header({ togleTheme }) {
     const { user } = useAuth()
     return (
         <Container click={click}>
-            <MenuIcon onClick={handleMenu} />
             {
-                user ? <LogIn>
-                    <Links to='/login'>Home</Links>
-                    <Links to='/perfil'>Perfil</Links>
-                    <Links to=''>Cursos</Links>
-                </LogIn> :
-                    <Logout onClick={handleMenu} className='menu active'>
-                        <Links to='/'><LogoIcon /></Links>
-                        <Links to='churrasco'>Churrasco</Links>
-                        <Links to='/hamburguer'>Hambúrguer</Links>
-                        <Links to='mestre-cervejeiro'>Mestre Cervejeiro</Links>
-                        <Links to='/cadastrar'>Cadastrar</Links>
-                        <LoginButton to='/login'>Entrar</LoginButton>
+                user ? <DashboardHeader /> :
+                    <Logout onClick={handleMenu} >
+                        <MenuIcon onClick={handleMenu} />
+                        <div className='menu '>
+                            <Links to='/'><LogoIcon /></Links>
+                            <Links to='churrasco'>Churrasco</Links>
+                            <Links to='/hamburguer'>Hambúrguer</Links>
+                            <Links to='mestre-cervejeiro'>Mestre Cervejeiro</Links>
+                            <Links to='/cadastrar'>Cadastrar</Links>
+                            <LoginButton to='/login'>Entrar</LoginButton>
+                        </div>
                     </Logout>
             }
-
-
             <Switch
                 onChange={togleTheme} checked={title === 'dark'}
                 height={15}

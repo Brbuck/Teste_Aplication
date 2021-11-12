@@ -7,6 +7,7 @@ export const Container = styled.div`
     width: 100%;
     height: 80px;
     padding: 10px 30px;
+    white-space: nowrap;
 
     display: flex;
     justify-content: space-around;
@@ -54,9 +55,7 @@ export const Logout = styled.div`
         }
     }
 `
-export const LogIn = styled(Logout)`
 
-`
 export const iconCss = css`
     width: 30px;
     height: 30px;

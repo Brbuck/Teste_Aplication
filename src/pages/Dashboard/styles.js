@@ -11,22 +11,3 @@ export const Container = styled.div`
      align-items: center;
   
 `;
-
-export const LogoutButton = styled.button`
-    width: 200px;
-    height: 40px;
-    padding: 5px;
-
-    background-color: #ff0f4d;
-    color: #fff;
-    font-size: 1rem;
-    font-weight:bold;
-    border-radius: 6px;
-
-    cursor: pointer;
-    transition: all 0.3s;
-
-    &:hover {
-      filter: brightness(0.8);
-    }
-`
