@@ -7,15 +7,19 @@ function DashboardHeader() {
     const { Logout, user } = useAuth()
     const [modal, setModal] = useState(false)
 
+    function ShowModal (){
+        setModal(!modal)
+    }
+
     function handleLogout() {
         Logout();
     }
     return (
-        <Container>
-            <MenuIcon onClick={() => { setModal(!modal) }} />
-            <Links to='/login'>Home</Links>
+        <Container onClick={ShowModal} >
+            <MenuIcon onClick={ShowModal} />
+            <Links   to='/login'>Home</Links>
             <Links to='/perfil'>Perfil</Links>
-            <Links to=''>Cursos</Links>
+            <Links to='/cursos'>Cursos</Links>
             {
                 modal ? <Menu>
                     <span>Olá {user.name}, seja bem vindo novamente!</span>

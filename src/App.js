@@ -19,15 +19,15 @@ function App() {
   }
 
   return (
-    <AuthProvider>
-      <ThemeProvider theme={theme}>
-        <Router>
+    <Router>
+      <AuthProvider>
+        <ThemeProvider theme={theme}>
           <Header togleTheme={togleTheme} />
           <Routers />
-        </Router>
-        <GlobalStyles />
-      </ThemeProvider>
-    </AuthProvider>
+          <GlobalStyles />
+        </ThemeProvider>
+      </AuthProvider>
+    </Router>
   );
 }
 
