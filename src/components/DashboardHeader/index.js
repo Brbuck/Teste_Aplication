@@ -11,11 +11,16 @@ function DashboardHeader() {
         setModal(!modal)
     }
 
+    function CloseModal (){
+        if(modal === true)
+        setModal(!modal)
+    }
+
     function handleLogout() {
         Logout();
     }
     return (
-        <Container onClick={ShowModal} >
+        <Container onClick={CloseModal} >
             <MenuIcon onClick={ShowModal} />
             <Links   to='/login'>Home</Links>
             <Links to='/perfil'>Perfil</Links>

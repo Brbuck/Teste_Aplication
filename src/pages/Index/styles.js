@@ -130,8 +130,8 @@ export const Image = styled.img`
     height: 260px;
 
     @media screen and (max-width: 650px){
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
     }
     
 `
@@ -173,7 +173,7 @@ export const HamburguerContainer = styled.div`
 
     >img{
         width: 510px; 
-        height: 300px ;
+        height: 300px;
 
         @media screen and (max-width: 1000px){
             order: -1;
@@ -185,11 +185,12 @@ export const HamburguerContainer = styled.div`
         }
 
         @media screen and (max-width: 650px){
-            width: 400px;
+            width: 340px;
         }
 
-    @media screen and (max-width: 450px){
-            width: 300px;
+        @media screen and (max-width: 450px){
+            width: 280px;
+            height: 280px ;
         }
     }
 
@@ -198,7 +199,13 @@ export const HamburguerContainer = styled.div`
 `
 
 export const CervejaContainer = styled.div`
+    display: flex;
+    flex-direction: column;
     padding: 10px;
+
+    @media screen and (max-width: 812px){
+        align-items: center;      
+    };
 
     >img{
         width: 510px; 
@@ -206,12 +213,11 @@ export const CervejaContainer = styled.div`
         margin-top: 20px;
 
         @media screen and (max-width: 650px){
-            width: 400px;
+            width: 340px;
+           
         };
 
-        @media screen and (max-width: 450px){
-             width: 300px;
-        }
+      
 
         
     }
@@ -220,7 +226,7 @@ export const CervejaContainer = styled.div`
         
         >h2{
             font-size: 2.2rem;
-            margin-bottom:20px;
+            margin: 20px 0px;
 
             @media screen and (max-width: 650px){
                 font-size: 1.6rem;

@@ -15,8 +15,8 @@ function SignIn() {
             <h1>Faça seu Login na plataforma</h1>
           </div>
           <LoginArea>
-              <Input className='active' type="text" placeholder="E-mail" />
-              <Input type="password" placeholder="Senha" />
+              <Input className='active' value='teste.teste@gmail.com' type="text" placeholder="E-mail" />
+              <Input type="password" value='12345678' placeholder="Senha" />
               <LoginButton onClick={handleSign}>ENTRAR</LoginButton>
           </LoginArea>
 

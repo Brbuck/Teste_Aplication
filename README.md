@@ -2,7 +2,7 @@
 
 # Sobre o projeto
 
-Um site (parcial) de educação, com autenticação de usuarios e tema Dark e Light para fins de estudo
+Um site (parcial) de educação, com Autenticação JWT, com back-end(Fake) próprio e tema Dark e Light para fins de estudo.
 
 # Tecnologias
 

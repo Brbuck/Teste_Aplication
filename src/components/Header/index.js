@@ -13,7 +13,6 @@ function Header({ togleTheme }) {
     const [click, setClick] = useState(false)
     const handleMenu = () => {
         setClick(!click)
-        console.log(click)
     }
 
     const { user } = useAuth()

@@ -28,10 +28,10 @@ export const Container = styled.div`
         @media screen and (max-width: 812px){
             position: absolute;
             width: 100%;
+            top: 70px;
             left: ${({click}) => (click ? '0px' : '-100%')};
             height: 100vh;
             flex-direction: column;
-            top: 70px;
 
             background-color: ${props => props.theme.colors.background};
         }
